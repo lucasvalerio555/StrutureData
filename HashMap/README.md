@@ -123,16 +123,16 @@ Methods: - enqueue - dequeue - peek - size - isEmpty
 # Visualization
 
 ## Linked List
-             ┌───┐   ┌───┐   ┌───┐
+
     [HEAD] → | A | → | B | → | C | → null
-             └───┘   └───┘   └───┘
+
 ## Binary Tree
 
-            (10)
-          /     \
-        (5)     (20)
-        / \     /  \
-     (45)(55) (15) (30)
+           (10)
+          /    \
+        (5)    (20)
+               /
+             (15)
 
 ## Stack
 
@@ -156,7 +156,7 @@ Methods: - enqueue - dequeue - peek - size - isEmpty
      |    2     |  "Juan"  |
      └─────────────────────┤
      |    3     |  "Pedro" |
-     └─────────────────────┘ 
+     └─────────────────────┘
 
 # Coding Standards
 

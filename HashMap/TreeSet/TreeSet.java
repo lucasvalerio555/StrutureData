@@ -11,12 +11,12 @@ public class TreeSet<T extends Comparable<T>> {
     private Node<T>[][] arrayNode;
     private int count;
 
-    // Nuevos campos
+    // 🔧 Nuevos campos agregados que usás pero no habías declarado
     private Node<T>[] cache;
     private boolean isCached;
 
     // ============================
-    // Clase interna Node
+    // 🌳 Clase interna Node
     // ============================
     class Node<E> {
         private Node<E> root;
@@ -34,12 +34,10 @@ public class TreeSet<T extends Comparable<T>> {
 
         public void setNodeLeft(Node<E> node) {
             this.left = node;
-            if (node != null) node.setNodeRoot((Node<E>) this);
         }
 
         public void setNodeRight(Node<E> node) {
             this.right = node;
-            if (node != null) node.setNodeRoot((Node<E>) this);
         }
 
         public void setData(E value) {
@@ -53,7 +51,7 @@ public class TreeSet<T extends Comparable<T>> {
     }
 
     // ============================
-    // Constructor
+    // 🔧 Constructor
     // ============================
     @SuppressWarnings("unchecked")
     public TreeSet() {
@@ -83,7 +81,7 @@ public class TreeSet<T extends Comparable<T>> {
     }
 
     // ============================
-    // Insertar elementos
+    // 🌱 Insertar elementos
     // ============================
     public void add(T element) {
         Node<T> tail = new Node<>(element);
@@ -108,7 +106,7 @@ public class TreeSet<T extends Comparable<T>> {
         }
 
         this.builder.append(element).append(",");
-        if (this.count < arrayNode.length)
+        if (this.count < 10)
             this.arrayNode[count][count] = tail;
         count++;
         size++;
@@ -148,7 +146,7 @@ public class TreeSet<T extends Comparable<T>> {
                 this.countleft++;
             }
         }
-        if (this.count < arrayNode.length)
+        if (this.count < 10)
             this.arrayNode[count][count] = tail;
         count++;
         size++;
@@ -171,7 +169,7 @@ public class TreeSet<T extends Comparable<T>> {
                 this.countright++;
             }
         }
-        if (this.count < arrayNode.length)
+        if (this.count < 10)
             this.arrayNode[count][count] = tail;
         count++;
         size++;
@@ -179,14 +177,11 @@ public class TreeSet<T extends Comparable<T>> {
     }
 
     // ============================
-    // Búsqueda
+    // 🔍 Búsqueda
     // ============================
     private int search(T key) {
-        if (key == null) return -1;
         if (!isCached) rebuildCache();
-        if (cache == null || cache.length == 0) return -1;
         for (int i = 0; i < cache.length; i++) {
-            if (cache[i] == null) continue;
             if (cache[i].data.compareTo(key) == 0)
                 return i;
         }
@@ -194,24 +189,16 @@ public class TreeSet<T extends Comparable<T>> {
     }
 
     // ============================
-    // Ordenación y llenado del array
+    // ⚙️ Ordenación y llenado del array
     // ============================
     private void orderArray(Node<T>[] array) {
-        if (array == null || array.length == 0) return;
         Arrays.sort(array, (a, b) -> {
-            if (a == b) return 0;
-            if (a == null) return 1; // nulls last
-            if (b == null) return -1;
+            if (a == null || b == null) return 0;
             return a.data.compareTo(b.data);
         });
     }
 
     private void fillArray() {
-        if (size <= 0) {
-            cache = (Node<T>[]) new Node[0];
-            return;
-        }
-
         cache = new Node[size];
         int pos = 0;
         for (int i = 0; i < arrayNode.length && pos < size; i++) {
@@ -219,10 +206,6 @@ public class TreeSet<T extends Comparable<T>> {
                 if (arrayNode[i][j] != null)
                     cache[pos++] = arrayNode[i][j];
             }
-        }
-        // Si por alguna razón no llenó todo (ej. size > cantidad real), recorta:
-        if (pos < cache.length) {
-            cache = Arrays.copyOf(cache, pos);
         }
         orderArray(cache);
     }
@@ -233,16 +216,13 @@ public class TreeSet<T extends Comparable<T>> {
     }
 
     // ============================
-    // Acceso y modificación
+    // 📦 Acceso y modificación
     // ============================
     public T get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Índice fuera del rango");
         }
         if (!isCached) rebuildCache();
-        if (cache == null || index >= cache.length || cache[index] == null) {
-            throw new IndexOutOfBoundsException("Índice fuera del rango (cache)"); 
-        }
         return cache[index].data;
     }
 
@@ -262,18 +242,10 @@ public class TreeSet<T extends Comparable<T>> {
 
         // Actualizar cache
         if (!isCached) rebuildCache();
-        if (cache == null || cache.length == 0) {
-            size--;
-            isCached = false;
-            return;
-        }
-        Node<T>[] newCache = Arrays.copyOf(cache, Math.max(0, size - 1));
+        Node<T>[] newCache = Arrays.copyOf(cache, size - 1);
         int pos = 0;
         for (int i = 0; i < cache.length; i++) {
-            if (i != index) {
-                if (pos < newCache.length)
-                    newCache[pos++] = cache[i];
-            }
+            if (i != index) newCache[pos++] = cache[i];
         }
         cache = newCache;
         size--;
@@ -295,7 +267,7 @@ public class TreeSet<T extends Comparable<T>> {
     }
 
     // ============================
-    // indexOf y balance
+    // 🔍 indexOf y balance
     // ============================
     public int indexOf(T key) {
         return search(key);
@@ -312,28 +284,11 @@ public class TreeSet<T extends Comparable<T>> {
             fillList(node.left, list);
             list.add(node.data);
             fillList(node.right, list);
-        }
     }
-
-    // Devuelve la matriz de nodos (tu método corregido)
-    public Node<T>[][] getNode() {
-       return this.arrayNode;
-    }
-
-    // Alias más explícito por si lo prefieres
-    public Node<T>[][] getNodeMatrix() {
-       return this.arrayNode;
-    }
-
+ 
     public void balance() {
         if (!isCached) rebuildCache();
-        if (cache == null || cache.length == 0) return;
-        Arrays.sort(cache, (a, b) -> {
-            if (a == b) return 0;
-            if (a == null) return 1;
-            if (b == null) return -1;
-            return a.data.compareTo(b.data);
-        });
+        Arrays.sort(cache, (a, b) -> a.data.compareTo(b.data));
         // reconstrucción simple del árbol balanceado
         this.root = buildBalanced(0, cache.length - 1);
     }
@@ -341,12 +296,9 @@ public class TreeSet<T extends Comparable<T>> {
     private Node<T> buildBalanced(int start, int end) {
         if (start > end) return null;
         int mid = (start + end) / 2;
-        if (mid < 0 || mid >= cache.length || cache[mid] == null) return null;
         Node<T> node = new Node<>(cache[mid].data);
-        Node<T> leftNode = buildBalanced(start, mid - 1);
-        Node<T> rightNode = buildBalanced(mid + 1, end);
-        node.setNodeLeft(leftNode);
-        node.setNodeRight(rightNode);
+        node.setNodeLeft(buildBalanced(start, mid - 1));
+        node.setNodeRight(buildBalanced(mid + 1, end));
         return node;
     }
 }

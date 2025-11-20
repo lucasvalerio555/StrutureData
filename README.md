@@ -14,7 +14,7 @@ __The method "Add"__
   
   
   
-=======
+
 # 📦 StructureData
 
        _____ _             _              _        ____        _       

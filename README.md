@@ -62,7 +62,10 @@ value.
      │     └── Tree.java
      ├── /stack
      │     └── Stack.java
-     ├── /queue
+     ├── /Queue
+     |     └── Queue.java
+     ├──  /HashMap
+     |      └── HashMap.java
      ├── Main.java
      └── README.md
 

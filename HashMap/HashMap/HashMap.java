@@ -99,12 +99,60 @@ public class HashMap<K extends Comparable<K>, V> {
         return arrayNode[row][col].getValue();
     }
 
-    // ======================================================
-    // REMOVE
-    // ======================================================
-    public void remove(int index) {
-        // implementar si se necesita
+   // ======================================================
+   // REMOVE
+   // ======================================================
+    public void remove(K key) {
+        // Buscar el nodo en la lista enlazada
+         if (start == null) return; // Lista vacía
+    
+        // Caso donde el primer nodo es el que se va a remover
+        if (start.getKey().equals(key)) {
+            start = start.getNext();
+            size--;
+            return;
+        }
+
+        Node<K, V> prev = null;
+        Node<K, V> current = start;
+        while (current != null) {
+            if (current.getKey().equals(key)) {
+                if (prev != null) {
+                    prev.setNext(current.getNext());
+                }
+                size--;
+                break;
+            }
+            prev = current;
+            current = current.getNext();
+        }
+
+       // Buscar el nodo en la matriz y eliminarlo
+        int pos = search(key);
+        if (pos == -1) return; // Si no se encontró en el array
+
+        int row = pos / MATRIX_SIZE;
+        int col = pos % MATRIX_SIZE;
+
+        // Limpiar el nodo en la matriz
+        arrayNode[row][col] = null;
+
+        // Reorganizar los elementos después de la eliminación
+        shiftMatrixAfterRemoval();
     }
+
+    // Método auxiliar para desplazar los elementos en la matriz
+    private void shiftMatrixAfterRemoval() {
+        for (int row = 0; row < MATRIX_SIZE; row++) {
+            for (int col = 0; col < MATRIX_SIZE - 1; col++) {
+                if (arrayNode[row][col] == null && arrayNode[row][col + 1] != null) {
+                    arrayNode[row][col] = arrayNode[row][col + 1];
+                    arrayNode[row][col + 1] = null;
+                }
+            }
+        }
+    }
+
 
     // ======================================================
     // CLEAR
@@ -151,6 +199,7 @@ public class HashMap<K extends Comparable<K>, V> {
         if (size > 1)
             quickSortMatrix(0, size - 1);
     }
+
 
     private void quickSortMatrix(int low, int high) {
         if (low < high) {

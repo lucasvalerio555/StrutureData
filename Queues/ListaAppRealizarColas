@@ -1,0 +1,239 @@
+# 100+ Aplicaciones con Estructura de Datos Cola (Queue)
+
+## Gestión de Turnos y Atención al Cliente (1-15)
+1. Sistema de turnos para banco
+2. Cola de espera en hospital
+3. Turnos para restaurante
+4. Sistema de citas médicas
+5. Cola de atención en farmacia
+6. Turnos para trámites gubernamentales
+7. Sistema de espera en peluquería/barbería
+8. Cola de atención en veterinaria
+9. Turnos para servicio técnico
+10. Sistema de espera en notaría
+11. Cola de atención en óptica
+12. Turnos para lavado de autos
+13. Sistema de espera en taller mecánico
+14. Cola de atención en biblioteca
+15. Turnos para consultoría legal
+
+## Simuladores de Tráfico y Transporte (16-30)
+16. Simulador de semáforo
+17. Cola de peaje en autopista
+18. Sistema de embarque en aeropuerto
+19. Cola de taxis en parada
+20. Simulador de estacionamiento
+21. Cola de autobuses en terminal
+22. Sistema de abordaje en tren/metro
+23. Simulador de drive-through
+24. Cola de barcos en puerto
+25. Sistema de carga de camiones
+26. Simulador de gasolinera
+27. Cola de aviones para despegue
+28. Sistema de ferry/transbordador
+29. Simulador de teleférico
+30. Cola de bicicletas compartidas
+
+## Sistemas de Impresión y Documentos (31-40)
+31. Spooler de impresora
+32. Cola de escaneo de documentos
+33. Sistema de fotocopiado
+34. Cola de fax pendientes
+35. Gestor de documentos por firmar
+36. Cola de archivos por comprimir
+37. Sistema de conversión de formatos
+38. Cola de PDFs por generar
+39. Gestor de reportes pendientes
+40. Cola de facturas por imprimir
+
+## Multimedia y Entretenimiento (41-55)
+41. Playlist de música
+42. Cola de videos por ver
+43. Sistema de streaming con buffer
+44. Cola de podcasts pendientes
+45. Gestor de descargas
+46. Cola de renderizado de video
+47. Sistema de subida de fotos
+48. Cola de conversión de audio
+49. Playlist de karaoke
+50. Cola de efectos de sonido en juego
+51. Sistema de DJ con canciones en espera
+52. Cola de transmisión en vivo
+53. Gestor de grabaciones pendientes
+54. Cola de edición de imágenes
+55. Sistema de slideshow automático
+
+## Juegos y Simulaciones (56-75)
+56. Juego de la serpiente (snake)
+57. Tower defense (enemigos en fila)
+58. Simulador de montaña rusa
+59. Juego de cartas con mazo
+60. Cola de spawning de enemigos
+61. Sistema de matchmaking
+62. Simulador de ascensor
+63. Juego de cocina (pedidos entrantes)
+64. Cola de power-ups en juego
+65. Simulador de parque de diversiones
+66. Juego de mesero (atender mesas en orden)
+67. Cola de animaciones en juego
+68. Simulador de zoológico (alimentar animales)
+69. Juego de hospital (atender pacientes)
+70. Cola de eventos en juego de estrategia
+71. Simulador de aeropuerto
+72. Juego de construcción (tareas pendientes)
+73. Cola de diálogos en RPG
+74. Simulador de granja (cosechas pendientes)
+75. Juego de fábrica (productos en línea de ensamblaje)
+
+## Algoritmos y Estructuras (76-85)
+76. Búsqueda BFS en grafos
+77. Recorrido por niveles en árboles
+78. Resolución de laberintos
+79. Algoritmo de inundación (flood fill)
+80. Ordenamiento topológico
+81. Encontrar camino más corto
+82. Serialización de árboles binarios
+83. Detección de ciclos en grafos
+84. Algoritmo de Dijkstra (versión con cola)
+85. Procesamiento de expresiones matemáticas
+
+## Comunicación y Mensajería (86-100)
+86. Chat en tiempo real
+87. Cola de mensajes SMS
+88. Sistema de notificaciones push
+89. Cola de emails por enviar
+90. Buffer de mensajes de WhatsApp
+91. Sistema de mensajería interna empresarial
+92. Cola de tweets programados
+93. Sistema de comentarios en vivo
+94. Cola de mensajes de voz
+95. Buffer de videollamada
+96. Sistema de alertas del sistema
+97. Cola de invitaciones pendientes
+98. Sistema de broadcast de mensajes
+99. Cola de respuestas automáticas (chatbot)
+100. Sistema de encuestas en tiempo real
+
+## Comercio y Finanzas (101-115)
+101. Cola de pedidos en e-commerce
+102. Sistema de órdenes de bolsa
+103. Cola de transacciones bancarias
+104. Sistema de pagos pendientes
+105. Cola de reembolsos
+106. Sistema de subastas online
+107. Cola de transferencias
+108. Sistema de préstamos por aprobar
+109. Cola de reclamos de seguros
+110. Sistema de facturación automática
+111. Cola de cobros recurrentes
+112. Sistema de liquidación de nómina
+113. Cola de solicitudes de crédito
+114. Sistema de cambio de divisas
+115. Cola de retiros en cajero ATM
+
+## Sistemas Operativos y Redes (116-130)
+116. Planificador de procesos (Round Robin)
+117. Buffer de paquetes de red
+118. Cola de interrupciones del sistema
+119. Gestor de memoria con páginas
+120. Cola de entrada/salida de disco
+121. Sistema de caché FIFO
+122. Buffer de teclado
+123. Cola de eventos del mouse
+124. Sistema de logs del servidor
+125. Buffer de conexiones TCP
+126. Cola de peticiones HTTP
+127. Sistema de balanceo de carga
+128. Buffer de DNS queries
+129. Cola de backups programados
+130. Sistema de sincronización de archivos
+
+## Educación y Productividad (131-145)
+131. Sistema de flashcards para estudiar
+132. Cola de tareas pendientes (to-do)
+133. Sistema de preguntas en clase virtual
+134. Cola de ejercicios por resolver
+135. Sistema de exámenes online (preguntas en secuencia)
+136. Cola de cursos por completar
+137. Sistema de recordatorios
+138. Cola de libros por leer
+139. Sistema de práctica de idiomas
+140. Cola de proyectos pendientes
+141. Sistema de revisión de código
+142. Cola de tutorías programadas
+143. Sistema de entregas de trabajos
+144. Cola de certificaciones por obtener
+145. Sistema de metas progresivas
+
+## Salud y Emergencias (146-160)
+146. Sistema de triaje en emergencias
+147. Cola de cirugías programadas
+148. Sistema de donación de sangre
+149. Cola de vacunación
+150. Sistema de análisis de laboratorio
+151. Cola de radiografías pendientes
+152. Sistema de dispensación de medicamentos
+153. Cola de ambulancias
+154. Sistema de trasplantes de órganos
+155. Cola de terapia física
+156. Sistema de atención psicológica
+157. Cola de pruebas COVID/enfermedades
+158. Sistema de rehabilitación
+159. Cola de consultas de telemedicina
+160. Sistema de seguimiento de pacientes
+
+## Logística y Almacenes (161-175)
+161. Sistema de pedidos de almacén
+162. Cola de productos por empacar
+163. Sistema de envíos pendientes
+164. Cola de devoluciones
+165. Sistema de inventario FIFO
+166. Cola de recepción de mercancía
+167. Sistema de picking en almacén
+168. Cola de contenedores en puerto
+169. Sistema de distribución de paquetes
+170. Cola de rutas de entrega
+171. Sistema de cross-docking
+172. Cola de pedidos mayoristas
+173. Sistema de reabastecimiento
+174. Cola de productos perecederos
+175. Sistema de trazabilidad de productos
+
+## Redes Sociales y Contenido (176-190)
+176. Feed cronológico de publicaciones
+177. Cola de moderación de contenido
+178. Sistema de solicitudes de amistad
+179. Cola de historias por ver
+180. Sistema de comentarios pendientes
+181. Cola de reportes de usuarios
+182. Sistema de verificación de cuentas
+183. Cola de sugerencias de amigos
+184. Sistema de hashtags trending
+185. Cola de menciones pendientes
+186. Sistema de mensajes directos
+187. Cola de publicaciones programadas
+188. Sistema de reacciones en vivo
+189. Cola de suscriptores nuevos
+190. Sistema de analytics en tiempo real
+
+## Servicios y Aplicaciones Varias (191-210)
+191. Sistema de reservas de hotel
+192. Cola de pedidos en food delivery
+193. Sistema de citas para visa/pasaporte
+194. Cola de reparaciones de electrodomésticos
+195. Sistema de quejas y sugerencias
+196. Cola de solicitudes de empleo
+197. Sistema de inscripción a eventos
+198. Cola de llamadas en call center
+199. Sistema de soporte técnico (tickets)
+200. Cola de servicios de limpieza
+201. Sistema de mantenimiento de edificios
+202. Cola de mudanzas programadas
+203. Sistema de adopción de mascotas
+204. Cola de trámites de licencias
+205. Sistema de registro civil
+206. Cola de servicios funerarios
+207. Sistema de lotería/sorteos
+208. Cola de audiciones/castings
+209. Sistema de voluntariado
+210. Cola de donaciones benéficas

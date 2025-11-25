@@ -104,7 +104,7 @@ Methods: - enqueue - dequeue - peek - size - isEmpty
     List<String> list = new List<>();
     list.add("Apple");
     list.add("Banana");
-    list.showData();
+    System.out.println(list.showData());
 
     Tree<Integer> tree = new Tree<>();
     tree.add(10);
@@ -119,6 +119,15 @@ Methods: - enqueue - dequeue - peek - size - isEmpty
     hash.push(1,"Lucas");
     hash.push(2,"Juan");
     hash.push(3,"Pedro");
+
+    System.out.println(hash.showData());
+
+    Queues<String> queues =new Queues<>();
+    queues.push("Lucas");
+    queues.push("Juan");
+    queues.push("Pedro");
+
+    System.out.println(queues.pop());
 
 # Visualization
 
@@ -145,6 +154,12 @@ Methods: - enqueue - dequeue - peek - size - isEmpty
      |  C  |
      └─────┘
     BOTTOM
+
+
+## Queues
+             ┌───┐   ┌───┐   ┌───┐
+    [HEAD] → | A | → | B | → | C | → [END] -> null
+             └───┘   └───┘   └───┘
 
 
 ## HashMap
